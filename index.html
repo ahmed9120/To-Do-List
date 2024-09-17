@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="bg-white">
+    <div class="addTask d-flex flex-column col-8 h-50 bg-white d-none">
+      <h2>Add New Task</h2>
+      <input class="addTaskInput" type="text" placeholder="Add New Task Here" />
+      <div class="actions d-flex justify-content-end align-items-end h-75">
+        <button class="cancel" onclick="cancleAddTask()">Cancel</button>
+        <button class="confirm" onclick="addTask()">Confirm</button>
+      </div>
+    </div>
+
+    <div
+      class="toDoList d-flex container-md mt-3 d-block flex-column flex-md-row"
+    >
+      <div class="col-12 col-md-4 left d-flex flex-md-column">
+        <button onclick="renderAll()">All</button>
+        <button onclick="renderToDo()">To-Do</button>
+        <button onclick="renderDone()">Done</button>
+        <button class="d-md-none" onclick="addTaskBtn()">
+          <i class="fa-solid fa-plus text-primary"></i>
+        </button>
+      </div>
+      <div class="col-12 col-md-8 right">
+        <div class="upper-part d-flex justify-content-between pt-2">
+          <h2 class="d-none d-md-block">All</h2>
+          <button
+            class="border-primary d-none d-md-block"
+            onclick="addTaskBtn()"
+          >
+            Add Task
+            <i class="fa-solid fa-plus text-primary"></i>
+          </button>
+        </div>
+        <div class="list pt-3 w-100 d-flex flex-column gap-2"></div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

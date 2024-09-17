@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toDoList {
+  min-height: 100vh;
+}
+
+.left button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: none;
+  font-weight: 500;
+}
+.left button:hover {
+  background-color: #f8f9facc;
+}
+
+.right .upper-part {
+  width: 100%;
+}
+.right .upper-part button {
+  border: 2px solid #00b4d8;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  background-color: #fff;
+}
+.right .upper-part button:hover {
+  background-color: #f8f9facc;
+}
+.right .list .toDo {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+.right .list .toDo p {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+.right .list .toDo input {
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.right .list .toDo input:checked {
+  background-color: #00b4d8;
+}
+/* /////// */
+.addTask {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.addTask input {
+  border: 1px solid #d2d2d3cc;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.addTask button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+.addTask .cancel {
+  border: 1px solid black;
+  background-color: white;
+}
+.addTask .confirm {
+  border: 1px solid #00b4d8;
+  background-color: #00b4d8;
+  color: white;
+}
+/* /////// */
+.left {
+  border-bottom: 1px solid black;
+}
+@media (min-width: 768px) {
+  .right {
+    border-left: 1px solid black;
+    padding-left: 2rem;
+  }
+  .left {
+    border-bottom: 0;
+  }
+}
